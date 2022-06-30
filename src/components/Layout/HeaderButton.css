@@ -9,6 +9,8 @@
   font-weight: bold;
   cursor: pointer;
   border: none;
+  height: 4rem;
+  margin: 8px 10px;
 }
 button:hover,
 button:active {
@@ -20,7 +22,7 @@ button:active {
   margin-right: 0.5rem;
 }
 .badge {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   font-weight: bold;
   background-color: #b94517;
   border-radius: 5rem;

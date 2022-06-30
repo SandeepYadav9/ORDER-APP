@@ -1,1 +1,14 @@
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  background-color: rgb(207, 49, 49);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.26);
+  z-index: 10;
+  
+}

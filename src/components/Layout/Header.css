@@ -10,5 +10,16 @@ header {
   color: white;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.26);
   z-index: 10;
-  
+}
+.main-image {
+  width: 100%;
+  z-index: 0;
+  height: 25rem;
+  overflow: hidden;
+}
+.main-image img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }

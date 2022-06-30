@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from './components/Layout/Header'
 
 const Food = () => {
   return (
-    <div>
-      Food Components
-    </div>
+    <Fragment>
+      <Header/>
+    </Fragment>
   )
 }
 

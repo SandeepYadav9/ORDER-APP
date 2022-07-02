@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Modal from "../UI/Modal";
 
 const Cart = () => {
   const cartItems = (
@@ -9,7 +10,7 @@ const Cart = () => {
     </ul>
   );
   return (
-    <Fragment>
+    <Modal>
       {cartItems}
       <div>
         <span>Total Amout</span>
@@ -19,7 +20,7 @@ const Cart = () => {
         <button>Close</button>
         <button>Order</button>
       </div>
-    </Fragment>
+    </Modal>
   );
 };
 

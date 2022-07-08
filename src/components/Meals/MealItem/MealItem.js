@@ -11,8 +11,6 @@ const MealItem = ({ name, description, price }) => {
       </div>
       <div className="priceContainer">
         <MealItemForm />
-
-        <button className="actionAddButton">+ Add</button>
       </div>
     </li>
   );

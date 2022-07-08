@@ -1,19 +1,22 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
-
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "./store/cartSlices";
 const Food = () => {
-  const [onClose, setOnClose] = useState(false);
+  const isOpen = useSelector((state) => state.cart.isOpen);
+  const dispatch = useDispatch();
+
   const onCloseHandler = () => {
-    setOnClose(false);
+    dispatch(cartActions.modelIsOpen());
   };
   const showCartHandler = () => {
-    setOnClose(true);
+    dispatch(cartActions.modelIsOpen());
   };
   return (
     <Fragment>
-      {onClose && <Cart onCloseHandler={onCloseHandler} />}
+      {isOpen && <Cart onCloseHandler={onCloseHandler} />}
       <Header showCart={showCartHandler} />
       <main>
         <Meals />

@@ -7,7 +7,7 @@ const BackDrop = (props) => {
 };
 const ModalOverLay = (props) => {
   return (
-    <div className="modal">
+    <div className="modal" onClick={props.onClose}>
       <div className="content">{props.children}</div>
     </div>
   );
@@ -16,7 +16,7 @@ const rootElements=document.getElementById('overlay')
 const Modal = (props) => {
   return <div>
     {ReactDOM.createPortal(<BackDrop onClick={props.onClose}/>, rootElements)}
-    {ReactDOM.createPortal(<ModalOverLay>{props.children}</ModalOverLay>, rootElements)}
+    {ReactDOM.createPortal(<ModalOverLay onClick={props.onClose}>{props.children}</ModalOverLay>, rootElements)}
   </div>;
 };
 

@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
-import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "./store/cartSlices";
+
 const Food = () => {
-  const isOpen = useSelector((state) => state.cart.isOpen);
+  const openModal = useSelector((state) => state.cart.isOpen);
   const dispatch = useDispatch();
 
   const onCloseHandler = () => {
@@ -14,9 +15,10 @@ const Food = () => {
   const showCartHandler = () => {
     dispatch(cartActions.modelIsOpen());
   };
+
   return (
     <Fragment>
-      {isOpen && <Cart onCloseHandler={onCloseHandler} />}
+      {openModal && <Cart onClose={onCloseHandler} />}
       <Header showCart={showCartHandler} />
       <main>
         <Meals />

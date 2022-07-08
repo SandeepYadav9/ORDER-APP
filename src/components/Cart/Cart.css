@@ -1,0 +1,22 @@
+.actions {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+.actions button {
+  padding: 0.5rem 2rem;
+  margin: 1px;
+  color:white;
+  background-color: brown;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+.actions .close{
+    background-color: white;
+    color: black;
+}
+.close:hover{
+    background-color: rgb(238, 149, 149);
+}
+

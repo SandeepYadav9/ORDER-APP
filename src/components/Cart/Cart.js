@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "../UI/Modal";
-
+import './Cart.css'
 const Cart = (props) => {
   const cartItems = (
     <ul className="cart-items">
@@ -16,8 +16,8 @@ const Cart = (props) => {
         <span>Total Amout</span>
         <span>35.62</span>
       </div>
-      <div>
-        <button onClose={props.onCloseHandler}>Close</button>
+      <div className="actions">
+        <button onClick={props.onClose} className="close">Close</button>
         <button>Order</button>
       </div>
     </Modal>

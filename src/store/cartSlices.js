@@ -8,7 +8,7 @@ const cartSlices = createSlice({
   initialState: initialState,
   reducers: {
     modelIsOpen: (state, action) => {
-      state.isOpen = true;
+      state.isOpen = !state.isOpen;
     },
   },
 });

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Food from "./Food";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import store from "./store/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

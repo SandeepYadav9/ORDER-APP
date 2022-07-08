@@ -4,7 +4,17 @@ import "./MealItemForm.css";
 const MealItemForm = () => {
   return (
     <form className="form">
-      <input type="text" />
+      <Input
+        label="Amount"
+        input={{
+          id: "input",
+          type: "text",
+          min: "1",
+          max: "5",
+          step: "1",
+          defaultValue: "1",
+        }}
+      />
       <button>+Add</button>
     </form>
   );

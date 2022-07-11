@@ -1,15 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialState = {
+
+const defaultCartState = {
   items: [],
-  isOpen: false,
+  totalAmount: 0,
 };
 const cartSlices = createSlice({
   name: "cart",
-  initialState: initialState,
+  initialState: defaultCartState,
   reducers: {
-    modelIsOpen: (state, action) => {
-      state.isOpen = !state.isOpen;
+    updatedTotalAmount:(state, action)=>{
+      
     },
+    addItem:(state, action)=>{}
   },
 });
 export const cartActions = cartSlices.actions;

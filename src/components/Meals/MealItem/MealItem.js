@@ -1,7 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./MealItem.css";
+import { useDispatch } from "react-redux";
 import MealItemForm from "./MealItemForm";
-const MealItem = ({ name, description, price }) => {
+const MealItem = ({ name, description, price, id }) => {
+  const dispatch = useDispatch();
+  
+  const addToCartHandler = (amount) => {
+    dispatch();
+  };
   return (
     <li className="meal">
       <div>
@@ -9,8 +15,8 @@ const MealItem = ({ name, description, price }) => {
         <div>{description}</div>
         <div>{price}</div>
       </div>
-      <div className="priceContainer">
-        <MealItemForm />
+      <div>
+        <MealItemForm id={id} onAddToCart={addToCartHandler} />
       </div>
     </li>
   );
